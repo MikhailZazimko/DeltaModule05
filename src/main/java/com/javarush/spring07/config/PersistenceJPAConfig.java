@@ -8,7 +8,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
 @EnableTransactionManagement
-@EnableJpaRepositories(basePackages = "com.javarush.spring07.db")
+@EnableJpaRepositories(basePackages = "com.javarush.spring07.repository")
 @EntityScan("com.javarush.spring07.entity")
 @EnableAutoConfiguration
 public class PersistenceJPAConfig {

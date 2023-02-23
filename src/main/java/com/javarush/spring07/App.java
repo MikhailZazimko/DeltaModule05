@@ -1,6 +1,6 @@
 package com.javarush.spring07;
 
-import com.javarush.spring07.entity.Customer;
+import com.javarush.spring07.entity.User;
 import com.javarush.spring07.service.CustomerService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -12,13 +12,13 @@ public class App {
         try (context) {
             long id = 1L;
             CustomerService customerService = context.getBean(CustomerService.class);
-            Customer customer = customerService.get(id).orElseThrow();
+            User user = customerService.get(id).orElseThrow();
             System.out.println(customerService.get(id));
-            customer.setPassword("test12345");
-            customerService.update(customer);
+            user.setPassword("test12345");
+            customerService.update(user);
             System.out.println(customerService.get(id));
-            customer.setPassword("456");
-            customerService.update(customer);
+            user.setPassword("456");
+            customerService.update(user);
             System.out.println(customerService.get(id));
         }
     }

@@ -1,4 +1,4 @@
-package com.javarush.spring07;
+package com.javarush.spring07.repository;
 
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.TestConfiguration;

@@ -31,19 +31,6 @@ public class AppConfig {
         }
     }
 
-    @Bean
-    DataSource datasource(
-            @Value("${spring.datasource.url}") String url,
-            @Value("${spring.datasource.username}") String username,
-            @Value("${spring.datasource.password}") String password
-    ) {
-        HikariConfig config = new HikariConfig();
-        config.setJdbcUrl(url);
-        config.setUsername(username);
-        config.setPassword(password);
-        config.setPoolName("myPool");
-        log.warn("my hikari created");
-        return new HikariDataSource(config);
-    }
+
 
 }
