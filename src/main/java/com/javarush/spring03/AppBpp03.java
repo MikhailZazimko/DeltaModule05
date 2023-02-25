@@ -1,16 +1,15 @@
 package com.javarush.spring03;
 
-import com.javarush.spring03.config.AppConfig;
+import com.javarush.spring03.config.AppConfig03;
 import com.javarush.spring03.entity.Customer;
 import com.javarush.spring03.service.CustomerService;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-public class App {
+public class AppBpp03 {
 
 
     public static void main(String[] args) {
-        var context = new AnnotationConfigApplicationContext(AppConfig.class);
-        try (context){
+        try (var context = new AnnotationConfigApplicationContext(AppConfig03.class)){
             long id = 1L;
             CustomerService customerService = context.getBean(CustomerService.class);
             Customer customer = customerService.get(id);

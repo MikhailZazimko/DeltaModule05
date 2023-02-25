@@ -4,11 +4,13 @@ import com.javarush.spring07.entity.User;
 import com.javarush.spring07.service.CustomerService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.PropertySource;
 
 @SpringBootApplication
-public class App {
+@PropertySource("classpath:application-07.yaml")
+public class AppJpa07 {
     public static void main(String[] args) {
-        var context = SpringApplication.run(App.class, args);
+        var context = SpringApplication.run(AppJpa07.class, args);
         try (context) {
             long id = 1L;
             CustomerService customerService = context.getBean(CustomerService.class);
@@ -23,3 +25,5 @@ public class App {
         }
     }
 }
+
+

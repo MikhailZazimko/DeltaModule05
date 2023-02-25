@@ -3,7 +3,7 @@ package com.javarush.spring04.validation;
 import com.javarush.spring04.validation.entity.Card;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-public class Runner {
+public class AppValidator04 {
     public static void main(String[] args) {
         var context = new AnnotationConfigApplicationContext(Config.class);
         var card = Card.builder()

@@ -1,9 +1,0 @@
-#logging.level.root=INFO
-spring:
-  datasource:
-    url: jdbc:postgresql://localhost:5432/game
-    username: postgres
-    password: postgres
-    driver-class-name: org.postgresql.Driver
-  liquibase:
-    change-log: db/changelog/changelog-master.xml
