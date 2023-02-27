@@ -1,15 +1,16 @@
 package com.javarush.spring08.controller;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class UserHandler {
 
-    @RequestMapping(method = RequestMethod.GET, value = "value")
-    String homePage() {
-        return "index";
+    @GetMapping("/*")
+    public ModelAndView homePage(ModelAndView view) {
+        view.setViewName("index");
+        return view;
     }
 
 }
