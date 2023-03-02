@@ -5,9 +5,9 @@ spring:
     password: postgres
 #   почему-то только в application.yaml (без -07) нормально работает
 #   похоже на баг обработки yaml
-    url: jdbc:postgresql://localhost:5432/game
+#    url: jdbc:postgresql://localhost:5432/game
   liquibase:
     change-log: db/changelog/changelog-master.xml
 # А вот так уже нормально в любом конфиге. Странно, но факт
-#spring.datasource.url: jdbc:postgresql://localhost:5432/game
+spring.datasource.url: jdbc:postgresql://localhost:5432/game
 

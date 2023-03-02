@@ -1,4 +1,4 @@
-package com.javarush.spring08;
+package com.javarush.spring09;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
