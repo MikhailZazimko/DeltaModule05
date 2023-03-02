@@ -26,8 +26,7 @@ public class UserService {
 
     @Transactional
     public User save(User user) {
-        repo.save(user);
-        return user;
+        return repo.saveAndFlush(user);
     }
 
     @Transactional
@@ -39,11 +38,10 @@ public class UserService {
         return repo.findById(id);
     }
 
+    @Transactional
     public void deleteById(Long id) {
         repo.deleteById(id);
     }
 
-    public Optional<User> findByLoginAndPassword(String login, String password) {
-        return repo.findByLoginAndPassword(login, password);
-    }
+
 }

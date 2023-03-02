@@ -64,9 +64,9 @@
             <a href="/users/${user.id}/">Edit</a>: ${user}
         </div>
     </c:forEach>
-<%--    <c:if test="${sessionScope.user}">--%>
+<%--    <c:if test="${sessionScope.currentUser}">--%>
 <%--        <div>--%>
-<%--            Session user: ${sessionScope.user}--%>
+<%--            Session user: ${sessionScope.currentUser}--%>
 <%--        </div>--%>
 <%--    </c:if>--%>
 </div>

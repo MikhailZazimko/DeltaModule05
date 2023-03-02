@@ -1,5 +1,6 @@
 package com.javarush.spring09.controller;
 
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -8,8 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class HomePageController {
 
     @RequestMapping(method = RequestMethod.GET, value = "/")
-    public String goToUsers() {
+    public String getHomePage(){
         return "redirect:/users/";
     }
-
 }
