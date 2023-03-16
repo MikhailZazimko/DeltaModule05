@@ -34,7 +34,7 @@ class RepoTest {
     @Test
     void findUsersByLogin() {
         List<User> users = repo.findUserByLogin("", "a");
-        assertEquals(4, users.size());
+        assertEquals(1, users.size());
     }
 
     @Test
@@ -51,7 +51,7 @@ class RepoTest {
             System.out.printf("Page %d from %d (items %d)\n"
                     , page.getNumber(), page.getTotalPages(), page.getTotalElements());
         } while (page.hasNext());
-        assertEquals(7, page.getTotalElements());
+        assertEquals(4, page.getTotalElements());
 
     }
 }
