@@ -3,6 +3,7 @@ package com.javarush.spring10.service;
 import com.javarush.spring10.entity.User;
 import com.javarush.spring10.repository.Repo;
 import lombok.AllArgsConstructor;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -21,7 +22,12 @@ public class UserService {
     }
 
     public List<User> findAll() {
-        return repo.findAll();
+        Sort sort=Sort.sort(User.class).by(User::getId);
+        return repo.findAll(sort);
+    }
+
+    public Optional<User> findById(Long id) {
+        return repo.findById(id);
     }
 
     @Transactional
@@ -32,10 +38,6 @@ public class UserService {
     @Transactional
     public void delete(User user) {
         repo.delete(user);
-    }
-
-    public Optional<User> findById(Long id) {
-        return repo.findById(id);
     }
 
     @Transactional

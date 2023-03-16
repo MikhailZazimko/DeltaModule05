@@ -6,7 +6,7 @@ import org.springframework.context.annotation.*;
 
 @Configuration
 @ComponentScan()
-@PropertySource("classpath:application-04.properties")
+@PropertySource("classpath:cfg/application-04.properties")
 public class Config {
 
     @Bean

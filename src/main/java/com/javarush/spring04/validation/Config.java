@@ -12,7 +12,7 @@ import javax.validation.ValidatorFactory;
 
 @Configuration
 @ComponentScan
-@PropertySource("classpath:application-04.properties")
+@PropertySource("classpath:cfg/application-04.properties")
 public class Config {
 
     private final ValidatorFactory validatorFactory = Validation.buildDefaultValidatorFactory();

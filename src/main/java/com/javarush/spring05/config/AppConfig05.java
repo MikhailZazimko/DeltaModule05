@@ -6,7 +6,7 @@ import org.springframework.context.annotation.PropertySource;
 
 @Configuration
 @ComponentScan("com.javarush.spring05")
-@PropertySource("classpath:application-05.properties")
+@PropertySource("classpath:cfg/application-05.properties")
 public class AppConfig05 {
 
 }

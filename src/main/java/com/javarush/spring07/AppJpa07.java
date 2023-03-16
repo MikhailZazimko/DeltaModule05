@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.PropertySource;
 
 @SpringBootApplication
-@PropertySource("classpath:application-07.yaml")
+@PropertySource("classpath:cfg/application-07.yaml")
 public class AppJpa07 {
     public static void main(String[] args) {
         var context = SpringApplication.run(AppJpa07.class, args);
