@@ -5,24 +5,23 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.javarush.spring13and14.controller.rest.UserRestController;
 import com.javarush.spring13and14.model.entity.User;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
-import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.reactive.server.WebTestClient;
 import reactor.core.publisher.Mono;
 
-@ExtendWith(SpringExtension.class)
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@SpringBootTest(
+        classes = com.javarush.spring13and14.AppTestLesson13and14.class,
+        webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT
+)
 class UserRestControllerTest {
+
+    private final ObjectMapper objectMapper = new ObjectMapper();
 
     @Autowired
     WebTestClient webClient;
-
-    @Autowired
-    ObjectMapper objectMapper;
 
     @Test
     void findAll() {
