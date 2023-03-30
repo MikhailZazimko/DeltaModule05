@@ -18,7 +18,8 @@ import reactor.core.publisher.Mono;
 )
 class UserRestControllerTest {
 
-    private final ObjectMapper objectMapper = new ObjectMapper();
+    @Autowired
+    ObjectMapper objectMapper;
 
     @Autowired
     WebTestClient webClient;
