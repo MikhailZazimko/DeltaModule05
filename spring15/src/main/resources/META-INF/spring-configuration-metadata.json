@@ -1,0 +1,24 @@
+{
+  "groups": [
+    {
+      "name": "logging.repository",
+      "type": "com.javarush.spring15.config.LoggingRepositoryProperties",
+      "sourceType": "com.javarush.spring15.config.LoggingRepositoryProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "logging.repository.level",
+      "type": "java.lang.String",
+      "description": "set log level (INFO WARNING etc)",
+      "sourceType": "com.javarush.spring15.config.LoggingRepositoryProperties"
+    },
+    {
+      "name": "logging.repository.state",
+      "type": "java.lang.String",
+      "description": "set \"on\" for start logging",
+      "sourceType": "com.javarush.spring15.config.LoggingRepositoryProperties"
+    }
+  ],
+  "hints": []
+}
