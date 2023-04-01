@@ -12,7 +12,7 @@
     <modules>
         <module>spring01_12</module>
         <module>spring13_14</module>
-        <module>spring15</module>
+        <module>spring15-repository-boot-starter</module>
     </modules>
     <properties>
         <maven.compiler.source>17</maven.compiler.source>

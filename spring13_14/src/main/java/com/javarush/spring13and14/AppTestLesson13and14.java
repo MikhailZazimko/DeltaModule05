@@ -8,9 +8,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class AppTestLesson13and14 {
     public static void main(String[] args) {
-        var context = SpringApplication.run(AppTestLesson13and14.class, args);
-        UserService userService = context.getBean(UserService.class);
-        UserDto user = userService.get(1L).block();
-        System.out.println(user);
+        SpringApplication.run(AppTestLesson13and14.class, args);
     }
 }

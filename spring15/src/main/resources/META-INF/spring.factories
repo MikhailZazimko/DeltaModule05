@@ -1,2 +1,0 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-com.javarush.spring15.config.LoggingRepositoryAutoconfiguration
