@@ -38,8 +38,8 @@
                 <div id="operation" class="col-md-8" th:switch="${user}">
 
                         <span th:case="${null}">
-                            <button name="createUser" class="btn btn-danger">Create</button>
-                            <button name="loginUser" class="btn btn-primary">Login</button>
+                            <button name="createUser" class="btn btn-primary">Create</button>
+                            <button name="loginUser" class="btn btn-danger" onclick="window.location = '/logout'">Logout</button>
                         </span>
                     <span th:case="*">
                             <button name="updateUser" class="btn btn-success">Update</button>

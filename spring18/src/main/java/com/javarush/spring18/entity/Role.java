@@ -10,6 +10,6 @@ public enum Role implements GrantedAuthority {
     public String getAuthority() {
         // For correct working springframework.security need ROLE_ADMIN instead of ADMIN.
         // Strange, but this is the story ;)
-        return "ROLE_" + this;
+        return this.toString();
     }
 }

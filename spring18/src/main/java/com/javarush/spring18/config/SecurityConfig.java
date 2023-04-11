@@ -16,13 +16,17 @@ public class SecurityConfig {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http
                 .authorizeHttpRequests(configurer -> configurer
-                        .requestMatchers("/users/**").hasAnyRole("ADMIN", "USER")
+                        .requestMatchers("/users/**").hasAnyAuthority("ADMIN", "USER")
                         .anyRequest().authenticated()
                 )
                 .formLogin(form -> form
                         .loginPage("/login")
                         .defaultSuccessUrl("/users/")
                         .permitAll())
+                .logout(logout->logout
+                        .logoutUrl("/logout")
+                        .permitAll()
+                )
                 //.httpBasic(withDefaults()) //bad practice
                 .csrf().disable();
         return http.build();
