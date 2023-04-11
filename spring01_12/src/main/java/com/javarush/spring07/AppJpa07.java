@@ -5,8 +5,9 @@ import com.javarush.spring07.service.CustomerService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
 
-@SpringBootApplication
+@SpringBootApplication(exclude = { SecurityAutoConfiguration.class })
 @PropertySource("classpath:cfg/application-07.yaml")
 public class AppJpa07 {
     public static void main(String[] args) {
